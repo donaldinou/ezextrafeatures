@@ -1,0 +1,35 @@
+
+EETETTTTETETTTEEEEETTETTETEETE
+TTETTETEETTTTTTEEETTEEETETETTE
+TTTE                      TTET
+EEEE                      TEET
+TETEEEET    EEE    ETETETETEET
+ETETTETT    EET         TEETET
+TTETTEET    TET         ETTETT
+ETTEETTT    TTT    ETEETETTETE
+EEETEEEE    TTT          TEETT
+ETEEETEE   EEEE          TETTE
+EETTEEEETTETTETTEETTTTETEETTEE
+TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+_________________________________________________________________________
+
+
+About eZ Extra Features
+========================================================================
+  This extension provides aditionnal features to the eZPublish core.
+
+
+Requirements
+========================================================================
+  PHP 5.3.0 or above (for namespace, lsb and reflection)
+  eZPublish 4.4 or above (introduction of extension.xml elements)
+ 
+ 
+Install
+========================================================================
+  Please read the install file place under doc folder.
+
+  
+Technical notes
+========================================================================
+  Please read the manual if you want to see all extra features.

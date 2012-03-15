@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="software" type="root" />
+	<xs:complexType name="root">
+		<xs:sequence>
+			<xs:element name="metadata" type="metadata" />
+			<xs:element name="dependencies" type="dependencies" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="software">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="version" type="xs:string" />
+			<xs:element name="copyright" type="xs:string" minOccurs="0" />
+			<xs:element name="license" type="xs:string" minOccurs="0" />
+			<xs:element name="info_url" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="metadata">
+		<xs:complexContent>
+			<xs:extension base="software">
+				<xs:sequence minOccurs="0">
+					<xs:element name="software" type="softwareuses" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="softwareuses">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="uses" type="software" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dependencies">
+		<xs:all>
+			<xs:element name="uses" type="extension" minOccurs="0" />
+			<xs:element name="requires" type="extension" minOccurs="0" />
+			<xs:element name="extends" type="extension" minOccurs="0" />
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="extension">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="extension" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

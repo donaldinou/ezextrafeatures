@@ -1,0 +1,64 @@
+
+EETETTTTETETTTEEEEETTETTETEETE
+TTETTETEETTTTTTEEETTEEETETETTE
+TTTE                      TTET
+EEEE                      TEET
+TETEEEET    EEE    ETETETETEET
+ETETTETT    EET         TEETET
+TTETTEET    TET         ETTETT
+ETTEETTT    TTT    ETEETETTETE
+EEETEEEE    TTT          TEETT
+ETEEETEE   EEEE          TETTE
+EETTEEEETTETTETTEETTTTETEETTEE
+TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+_________________________________________________________________________
+
+1. Unpack extension
+Unpack the downloaded package into the 'extension' directory of your 
+eZ Publish installation.
+
+2. Activate extension
+* Via BackOffice
+    Activate the extension by using the admin interface 
+    ( Setup -> Extensions ) 
+* Via ini file
+    Prepending ezextrafeatures to ActiveExtensions[] in 
+    settings/override/site.ini.append.php:
+
+    [ExtensionSettings]
+    ActiveExtensions[]=ezextrafeatures
+    
+    You can also active this extension for a specific siteaccess
+    [ExtensionSettings]
+    ActiveAccessExtensions[]=ezextrafeatures
+
+Note (For both case): 
+You can specify AdditionalSiteDesignList for a specific site access.
+Be sure to remove the one declare in this extension.
+    
+    [DesignSettings]
+    AdditionalSiteDesignList[]=ezextrafeatures
+    
+This need to be placed before all additional admin design.
+
+3. Clear all caches
+* Via BackOffice
+    Clear the cache by clicking the button in the Setup tab or in the right
+    panel.
+* Via command line
+    run this command in ezpublish root folder:
+    
+    php bin/php/ezcache.php --clear-all --purge
+
+4. Regenerate autoload array
+* Via BackOffice
+    Now you can regenerate autoload.
+    Just click on regenerate extension button to regenerate autoload.
+* Via command line
+    Now you can regenerate autoload.
+    run this command in ezpublish root folder:
+
+    php bin/php/ezpgenerateautoloads.php -e
+    
+    
+New features will come soon. See them in "doc/roadmap" file

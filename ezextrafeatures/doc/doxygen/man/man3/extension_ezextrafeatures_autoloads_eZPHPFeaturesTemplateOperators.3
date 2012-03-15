@@ -1,0 +1,224 @@
+.TH "extension\ezextrafeatures\autoloads\eZPHPFeaturesTemplateOperators" 3 "Thu Mar 15 2012" "Version 1.0.0-RC" "eZ Extra Features" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+extension\ezextrafeatures\autoloads\eZPHPFeaturesTemplateOperators \- 
+.PP
+Class operator to manage functions in template\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ()"
+.br
+.RI "\fIConstructor\&. \fP"
+.ti -1c
+.RI "\fBoperatorList\fP ()"
+.br
+.RI "\fIReturn an array with the template operator name\&. \fP"
+.ti -1c
+.RI "\fBnamedParameterPerOperator\fP ()"
+.br
+.RI "\fIReturn true to tell the template engine that the parameter list exists per operator type\&. \fP"
+.ti -1c
+.RI "\fBnamedParameterList\fP ()"
+.br
+.RI "\fIReturns an array of named parameters, this allows for easier retrieval of operator parameters\&. \fP"
+.ti -1c
+.RI "\fBmodify\fP ($tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, array $namedParameters, $placement)"
+.br
+.RI "\fIExecutes the PHP function for the operator cleanup and modifies \fI$operatorValue\fP\&. \fP"
+.ti -1c
+.RI "\fBcallPHPFunc\fP ($callback, array $param_arr)"
+.br
+.RI "\fICall a callback with an array of parameters\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBoperators\fP ()"
+.br
+.RI "\fIReturn the operators names\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$Operators\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class operator to manage functions in template\&. 
+
+Class operator to manage functions in template\&. This provide operators to use internal php function in template
+.PP
+\fBAuthor:\fP
+.RS 4
+Adrien Loyant adrien.loyant@te-laval.fr
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2012-01-01 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+\fBSince:\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+\fBCopyright:\fP
+.RS 4
+GNU Public License v\&.2
+.RE
+.PP
+extension 
+.PP
+Definition at line 18 of file ezphpfeaturestemplateoperators\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::__construct\fP ()"
+
+.PP
+Constructor\&. The constructor for the operator
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file ezphpfeaturestemplateoperators\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::callPHPFunc\fP ($callback, array $param_arr)"
+
+.PP
+Call a callback with an array of parameters\&. Call a callback with an array of parameters This should be called like this: callPHPFunc( 'str_replace', array( '%body%', 'black', '<body text='%body%'>' ) ); or callPHPFunc( array('DateTime', 'createFromFormat '), array( 'j-M-Y', '15-Feb-2009' ) );
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$callback\fP The callback to be call 
+.br
+\fI$param_arr\fP The parameters to be passed to the callback, as an indexed array\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mixed Returns the return value of the callback, or FALSE on error\&. 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file ezphpfeaturestemplateoperators\&.php\&.
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::modify\fP ($tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, array $namedParameters, $placement)"
+
+.PP
+Executes the PHP function for the operator cleanup and modifies \fI$operatorValue\fP\&. Executes the PHP function for the operator cleanup and modifies \fI$operatorValue\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$tpl\fP 
+.br
+\fI$operatorName\fP 
+.br
+\fI$operatorParameters\fP 
+.br
+\fI$rootNamespace\fP 
+.br
+\fI$currentNamespace\fP 
+.br
+\fI$operatorValue\fP This args is passed by reference 
+.br
+\fI$namedParameters\fP 
+.br
+\fI$placement\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file ezphpfeaturestemplateoperators\&.php\&.
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::namedParameterList\fP ()"
+
+.PP
+Returns an array of named parameters, this allows for easier retrieval of operator parameters\&. Returns an array of named parameters, this allows for easier retrieval of operator parameters\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+::namedParameterList
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+multitype:multitype:multitype:string boolean number multitype:string boolean 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file ezphpfeaturestemplateoperators\&.php\&.
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::namedParameterPerOperator\fP ()"
+
+.PP
+Return true to tell the template engine that the parameter list exists per operator type\&. Return true to tell the template engine that the parameter list exists per operator type, this is needed for operator classes that have multiple operators\&.
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file ezphpfeaturestemplateoperators\&.php\&.
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::operatorList\fP ()"
+
+.PP
+Return an array with the template operator name\&. Return an array with the template operator name\&.
+.PP
+\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file ezphpfeaturestemplateoperators\&.php\&.
+.SS "static \fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::operators\fP ()\fC [static]\fP"
+
+.PP
+Return the operators names\&. Return the operators names
+.PP
+\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file ezphpfeaturestemplateoperators\&.php\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBextension\\ezextrafeatures\\autoloads\\eZPHPFeaturesTemplateOperators::$Operators\fP\fC [protected]\fP"
+
+.PP
+Definition at line 26 of file ezphpfeaturestemplateoperators\&.php\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for eZ Extra Features from the source code\&.

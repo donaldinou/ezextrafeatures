@@ -1,0 +1,20 @@
+
+EETETTTTETETTTEEEEETTETTETEETE
+TTETTETEETTTTTTEEETTEEETETETTE
+TTTE                      TTET
+EEEE                      TEET
+TETEEEET    EEE    ETETETETEET
+ETETTETT    EET         TEETET
+TTETTEET    TET         ETTETT
+ETTEETTT    TTT    ETEETETTETE
+EEETEEEE    TTT          TEETT
+ETEEETEE   EEEE          TETTE
+EETTEEEETTETTETTEETTTTETEETTEE
+TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+_________________________________________________________________________
+
+<2012-xx-yy>:
+   * Provide possibility to add all methods for a class to the 
+     php wrap operator.
+   * Provide possibility to pass an objet instance to the php
+     wrap operator

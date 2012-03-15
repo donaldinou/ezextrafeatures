@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation="xml/xsd/extension.xsd">
+    <metadata>
+        <name>eZ Extra Features</name>
+        <version>1.0.0</version>
+        <copyright>Copyright (C) Technology Everywhere</copyright>
+        <license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+        <info_url>http://www.technology-everywhere.fr</info_url>
+    </metadata>
+    <dependencies>
+        <requires>
+            <extension name="ezjscore" />
+        </requires>
+    </dependencies>
+</software>
