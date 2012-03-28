@@ -75,7 +75,7 @@ namespace extension\ezextrafeatures\autoloads {
         public function namedParameterList() {
             return array(
                             'get_preferred_library' => array(
-                                                                'fallback_value' => array( 'type' => 'string', 'require' => false, 'default' => 'jquery' )
+                                                                'fallback_value' => array( 'type' => 'string', 'required' => false, 'default' => 'jquery' )
                                             )
             );
         }

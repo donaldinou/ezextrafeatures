@@ -77,7 +77,7 @@ namespace extension\ezextrafeatures\autoloads {
             return array(
                             'call_php_func' => array(
                                             'callback' => array( 'type' => 'string', 'required' => true, 'default' => '' ),
-                                            'param_arr' => array( 'type' => 'array', 'required' => true, 'default' => array() ),
+                                            'param_arr' => array( 'type' => 'array', 'required' => false, 'default' => array() ),
                                             'output' => array( 'type' => 'boolean', 'required' => false, 'default' => false )
                             )
             );

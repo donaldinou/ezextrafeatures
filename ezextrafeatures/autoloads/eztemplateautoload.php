@@ -1,5 +1,6 @@
 <?php
 
+use extension\ezextrafeatures\autoloads\eZINIFeaturesTemplateOperators;
 use extension\ezextrafeatures\autoloads\eZJSFeaturesTemplateOperators;
 use extension\ezextrafeatures\autoloads\eZPHPFeaturesTemplateOperators;
 use extension\ezextrafeatures\autoloads\eZExtraFeaturesTemplateOperators;
@@ -22,6 +23,12 @@ $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezextrafeatures/autol
 $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezextrafeatures/autoloads/ezjsfeaturestemplateoperators.php',
                 'class' => 'extension\\ezextrafeatures\\autoloads\\eZJSFeaturesTemplateOperators',
                 'operator_names' => eZJSFeaturesTemplateOperators::operators()
+);
+
+// Set template operators from ezinifeatures script
+$eZTemplateOperatorArray[] = array( 'script' => 'extension/ezextrafeatures/autoloads/ezinifeaturestemplateoperators.php',
+                'class' => 'extension\\ezextrafeatures\\autoloads\\eZINIFeaturesTemplateOperators',
+                'operator_names' => eZINIFeaturesTemplateOperators::operators()
 );
 
 ?>
