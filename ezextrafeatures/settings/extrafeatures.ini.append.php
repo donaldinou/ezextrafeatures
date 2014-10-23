@@ -8,6 +8,7 @@
 [eZPHPFunc]
 AuthorizedFunctions[]
 AuthorizedFunctions[]=str_replace
+AuthorizedFunctions[]=strip_tags
 AuthorizedFunctions[]=var_dump
 AuthorizedFunctions[]=DateTime::createFromFormat
 
