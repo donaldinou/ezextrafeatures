@@ -92,7 +92,7 @@ namespace extension\ezextrafeatures\autoloads {
          *
          * @return void
          */
-        public function modify( $tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, array $namedParameters, $placement ) {
+        public function modify( \eZTemplate $tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, array $namedParameters, $placement ) {
         switch ( $operatorName ) {
                 default:
                     // Nothing
