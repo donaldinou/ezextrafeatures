@@ -173,4 +173,3 @@ namespace extension\ezextrafeatures\classes\helpers {
     }
 
 }
-?>
