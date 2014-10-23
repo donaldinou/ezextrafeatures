@@ -4,30 +4,30 @@ namespace extension\ezextrafeatures\classes\helpers {
     use extension\ezextrafeatures\classes\enums\datatypeEnum;
 
     abstract class dataTypeValidatorHelper extends Helper {
-        
+
         public static function validateClassField( $value, datatypeEnum $type, $options=array() ) {
             $result = \eZInputValidator::STATE_ACCEPTED;
             $filterOptions = array();
-            
+
             switch ($type) {
                 case datatypeEnum::CHAR:
                     if (strlen($value) > 1) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::STRING:
                 case datatypeEnum::VARCHAR:
                     if (!is_string($value)) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::HEXA:
                     $filterOptions['flags'] = FILTER_FLAG_ALLOW_HEX;
                 case datatypeEnum::OCTAL:
                     $filterOptions['flags'] = FILTER_FLAG_ALLOW_OCTAL;
-                
+
                 case datatypeEnum::INT:
                 case datatypeEnum::INTEGER:
                 case datatypeEnum::LONG:
@@ -41,7 +41,7 @@ namespace extension\ezextrafeatures\classes\helpers {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                
+
                 case datatypeEnum::FLOAT:
                 case datatypeEnum::REAL:
                 case datatypeEnum::DOUBLE:
@@ -65,7 +65,7 @@ namespace extension\ezextrafeatures\classes\helpers {
                         }
                     }
                     break;
-                
+
                 case datatypeEnum::BOOL:
                 case datatypeEnum::BOOLEAN:
                     $filterOptions['flags'] = FILTER_NULL_ON_FAILURE;
@@ -73,25 +73,25 @@ namespace extension\ezextrafeatures\classes\helpers {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                
+
                 case datatypeEnum::ARR:
                     if (!is_array($value)) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::OBJECT:
                     if (!is_object($value)) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::EMAIL:
                     if (filter_var($value, FILTER_VALIDATE_EMAIL, $filterOptions) === false) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::IP:
                     if ( isset($option['mode']) ) {
                         if ( strtolower($option['mode']) == 'ipv6' ) {
@@ -99,13 +99,12 @@ namespace extension\ezextrafeatures\classes\helpers {
                         } elseif (strtolower($option['mode']) == 'ipv4') {
                             $filterOptions['flags'] = FILTER_FLAG_IPV4;
                         }
-                        // TODO option for pv and reserved range
                     }
                     if (filter_var($value, FILTER_VALIDATE_IP, $filterOptions) === false) {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                    
+
                 case datatypeEnum::URL:
                     if ( isset($option['path_required']) && $option['path_required'] ) {
                         $filterOptions['flags'] = (isset($filterOptions['flags'])) ? $filterOptions['flags']|FILTER_FLAG_PATH_REQUIRED : FILTER_FLAG_PATH_REQUIRED;
@@ -117,12 +116,12 @@ namespace extension\ezextrafeatures\classes\helpers {
                         $result = \eZInputValidator::STATE_INVALID;
                     }
                     break;
-                
+
                 default:
                     $result = \eZInputValidator::STATE_INTERMEDIATE;
                 break;
             }
-            
+
             // if unit test is ok
             if ($result == \eZInputValidator::STATE_ACCEPTED) {
                 if (!empty($option['allowed'])) {
@@ -136,10 +135,10 @@ namespace extension\ezextrafeatures\classes\helpers {
                     }
                 }
             }
-            
+
             return $result;
         }
-        
+
         public static function convertObjectField( $value, datatypeEnum $type ) {
             switch ($type) {
                 case datatypeEnum::INT:
@@ -147,31 +146,31 @@ namespace extension\ezextrafeatures\classes\helpers {
                 case datatypeEnum::LONG:
                     $value = (int)$value;
                     break;
-            
+
                 case datatypeEnum::FLOAT:
                 case datatypeEnum::DECIMAL:
                 case datatypeEnum::REAL:
                 case datatypeEnum::DOUBLE:
                     $value = (float)$value;
                     break;
-            
+
                 case datatypeEnum::BOOLEAN:
                 case datatypeEnum::BOOL:
                     $value = (bool)$value;
                     break;
-            
+
                 case datatypeEnum::ARR:
                     $value = unserialize($value);
                     break;
-            
+
                 default:
                     $value = (string)$value;
                     break;
             }
         }
-        
-        
+
+
     }
-    
+
 }
 ?>

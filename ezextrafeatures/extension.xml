@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="xml/xsd/extension.xsd">
     <metadata>
         <name>eZ Extra Features</name>

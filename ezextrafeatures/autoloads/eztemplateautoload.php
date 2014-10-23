@@ -9,8 +9,8 @@ $eZTemplateOperatorArray = array();
 
 // Set template operators from ezextrafeatures script
 $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezextrafeatures/autoloads/ezextrafeaturestemplateoperators.php',
-									'class' => 'extension\\ezextrafeatures\\autoloads\\eZExtraFeaturesTemplateOperators',
-									'operator_names' => eZExtraFeaturesTemplateOperators::operators()
+                                    'class' => 'extension\\ezextrafeatures\\autoloads\\eZExtraFeaturesTemplateOperators',
+                                    'operator_names' => eZExtraFeaturesTemplateOperators::operators()
 );
 
 // Set templte operators from ezphpfeatures script
@@ -30,5 +30,3 @@ $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezextrafeatures/autol
                 'class' => 'extension\\ezextrafeatures\\autoloads\\eZINIFeaturesTemplateOperators',
                 'operator_names' => eZINIFeaturesTemplateOperators::operators()
 );
-
-?>

@@ -1,21 +1,22 @@
 
-EETETTTTETETTTEEEEETTETTETEETE
-TTETTETEETTTTTTEEETTEEETETETTE
-TTTE                      TTET
-EEEE                      TEET
-TETEEEET    EEE    ETETETETEET
-ETETTETT    EET         TEETET
-TTETTEET    TET         ETTETT
-ETTEETTT    TTT    ETEETETTETE
-EEETEEEE    TTT          TEETT
-ETEEETEE   EEEE          TETTE
-EETTEEEETTETTETTEETTTTETEETTEE
-TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE
+TETE                      TETE
+TETE                      TETE
+TETETETE    TET    ETETETETETE
+TETETETE    TET         ETETTE
+TETETETE    TET         ETETTE
+TETETETE    TET    ETETETETETE
+TETETETE    TET          ETETE
+TETETETE    TET          ETETE
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE                     Technology-Everywhere.
 _________________________________________________________________________
 
 <2012-xx-yy>:
-   * Provide possibility to add all methods for a class to the 
+   * Provide possibility to add all methods for a class to the
      php wrap operator.
    * Provide possibility to pass an objet instance to the php
      wrap operator
    * Manage cross reference to ini/json parser
+   * ezextrafeatures/classes/helpers/datatypevalidatorhelper.php : datatypeEnum::IP -> option for pv and reserved range
