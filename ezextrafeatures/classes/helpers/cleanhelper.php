@@ -46,7 +46,7 @@ namespace extension\ezextrafeatures\classes\helpers {
                     foreach ($queryResult as $key => $item) {
                         $destIDList[] = $item[$destID];
                     }
-                    $query = 'DELETE FROM '. $checkTable . ' ' .
+                    $query = 'DELETE FROM `'. $checkTable . '` ' .
                              'WHERE '. $destID . ' IN ( ' . explode(',', $destIDList) . ' )';
                     \eZDebug::writeDebug( $query, 'sql' );
                     $db->query( $query );
