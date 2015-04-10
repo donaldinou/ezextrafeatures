@@ -34,7 +34,7 @@ namespace extension\ezextrafeatures\classes\helpers {
         public static function cleanupTable( $checkTable = 'ezcontentobject_tree', $srcTable = 'ezcontentobject', $srcID = 'id', $destID = 'contentobject_id', $addSql = '' ) {
             $db = \eZDB::instance();
             if ($db instanceof \eZDB) {
-                $query = 'SELECT DISTINCT '. $destID . ' ' .
+                $query = 'SELECT DISTINCT `'. $destID . '` ' .
                          'FROM ' . $checkTable .
                          'LEFT JOIN ' . $srcTable . ' ON ' . $srcTable.$srcID . ' = ' . $checkTable.$destID .
                          'WHERE ' . $srcTable.$srcID . ' IS NULL ' . $addSql;
